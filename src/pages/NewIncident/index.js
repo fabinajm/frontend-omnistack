@@ -12,7 +12,7 @@ export default function NewIncident(){
 
     const [title,setTitle] = useState('');
     const [description,setDescription] = useState('');
-    const [value,setValue] = useState('');
+    const [value,setValue] = useState('0');
 
     const history = useHistory();
 
@@ -82,6 +82,7 @@ export default function NewIncident(){
                               decimalSeparator={","}
                               decimalScale = {2}
                               fixedDecimalScale = {true}
+                              defaultValue={value}
                               onValueChange={(values) => setValue(values.value)}
                                />
 
